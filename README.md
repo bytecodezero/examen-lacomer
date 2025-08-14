@@ -11,7 +11,11 @@
 Esta aplicación es un **servicio RESTful** desarrollado con **Spring Boot**, que incluye integración con bases de datos MySQL (AWS Aurora) y documentación de API con **Swagger**.
 Está diseñada para ser fácilmente desplegable, escalable y compatible con entornos de desarrollo modernos.
 
----
+
+## 📄 Funcionamiento
+
+En el archivo **Funcionamiento.docx** encontrarás una breve explicación del funcionamiento general del API, incluyendo una peticion y una respuesta de cada servicio.
+
 
 ## 🛠 Tecnologías y Dependencias
 
@@ -54,10 +58,17 @@ Está diseñada para ser fácilmente desplegable, escalable y compatible con ent
    ```bash
    mvn spring-boot:run
    ```
-4. Acceder a la documentación de la API:
+4. Descomentar el token de proyecto application.properties:
 
    ```
-   http://localhost:8080/swagger-ui/index.html
+   # COPOMEX API token
+   #copomex.api.token=pruebas
+   copomex.api.token=5361b496-83e7-4cec-8a7a-c6a1bd286017
+   ```
+5. Acceder a la documentación de la API:
+
+   ```
+   http://localhost:9091/swagger-ui/index.html
    ```
 
 ---
