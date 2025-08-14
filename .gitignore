@@ -1,0 +1,53 @@
+# =========================
+# Documentación temporal
+# =========================
+#HELP.md
+
+# =========================
+# Build / Maven / Gradle
+# =========================
+target/
+.mvn/wrapper/maven-wrapper.jar
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# =========================
+# IDE / Editor
+# =========================
+## Eclipse / STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+## IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+## NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+## VS Code
+.vscode/
+
+# =========================
+# Archivos temporales y logs
+# =========================
+*.log
+*.tmp
+*.swp
+
+# =========================
+# Configuración sensible
+# =========================
+#application.properties
