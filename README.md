@@ -11,7 +11,11 @@
 Esta aplicación es un **servicio RESTful** desarrollado con **Spring Boot**, que incluye integración con bases de datos MySQL (AWS Aurora) y documentación de API con **Swagger**.
 Está diseñada para ser fácilmente desplegable, escalable y compatible con entornos de desarrollo modernos.
 
----
+
+## 📄 Funcionamiento
+
+En el archivo **Funcionamiento.docx** encontrarás una breve explicación del funcionamiento general del API, incluyendo una peticion y una respuesta de cada servicio.
+
 
 ## 🛠 Tecnologías y Dependencias
 
