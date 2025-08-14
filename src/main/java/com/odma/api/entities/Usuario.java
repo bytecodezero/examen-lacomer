@@ -1,7 +1,5 @@
 package com.odma.api.entities;
 
-
-
 import javax.persistence.*;
 
 @Entity
@@ -76,10 +74,4 @@ public class Usuario {
 		this.colonia = colonia;
 	}
 
-    
-    
-    
-  
-    
-    
 }

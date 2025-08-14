@@ -4,7 +4,6 @@ import com.odma.api.entities.Usuario;
 import com.odma.api.exception.UsuarioException;
 import com.odma.api.repository.UsuarioRepository;
 
-
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +37,7 @@ public class UsuarioService {
 	}
 
 	public Usuario buscar(Long id) {
-		return usuarioRepository.findById(id).orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+		return usuarioRepository.findById(id).orElseThrow(() -> new UsuarioException("Usuario no encontrado"));
 
 	}
 
@@ -55,7 +54,12 @@ public class UsuarioService {
 		usuarioExistente.setMunicipio(direccion.getMunicipio());
 		usuarioExistente.setColonia(direccion.getAsentamiento());
 
-		return usuarioRepository.save(usuarioExistente);
+		try {
+			return usuarioRepository.save(usuarioExistente);
+		} catch (DataIntegrityViolationException e) {
+			throw new UsuarioException("Hubo un problema al actualizar el usuario - " + e.getMessage());
+		}
+
 	}
 
 	public void eliminar(Long id) {

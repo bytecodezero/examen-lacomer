@@ -37,8 +37,9 @@ public class UsuarioController {
 	}
 
 	@PutMapping("/{id}")
-	public Usuario actualizar(@PathVariable Long id, @RequestBody Usuario usuario) throws Exception {
-		return usuarioService.actualizar(id, usuario);
+	public ResponseEntity<Usuario> actualizar(@PathVariable Long id, @RequestBody Usuario usuario) throws Exception {
+		Usuario usuarioActualizado = usuarioService.actualizar(id, usuario);
+		return ResponseEntity.ok(usuarioActualizado);
 	}
 
 	@DeleteMapping("/{id}")
